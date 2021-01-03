@@ -1,0 +1,255 @@
+@import url("https://fonts.google.com/specimen/Raleway");
+* {
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+  font-family: "Raleway", sans-serif;
+}
+
+.attribution {
+  font-size: 11px;
+  text-align: center;
+  padding: 1rem 0;
+}
+
+.attribution a {
+  color: #3e52a3;
+}
+
+.landing {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  min-height: 100vh;
+  background-image: url("/images/bg-mobile.png");
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-color: #0c122c;
+  padding: 1.5rem;
+  position: relative;
+  overflow: hidden;
+}
+
+@media (min-width: 800px) {
+  .landing {
+    background-image: none;
+  }
+  .landing::after {
+    content: url("/images/bg-desktop.png");
+    position: absolute;
+    left: 0;
+    bottom: -6%;
+    z-index: 0;
+  }
+}
+
+@media (max-height: 700px) {
+  .landing::after {
+    bottom: -18%;
+  }
+}
+
+.landing .container {
+  width: Min(100%, 880px);
+  z-index: 999;
+}
+
+@media (min-width: 800px) {
+  .landing .container {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-align: end;
+        -ms-flex-align: end;
+            align-items: flex-end;
+  }
+}
+
+.landing .container .card {
+  padding: 2.5rem;
+  margin: 1rem 0;
+  background-color: #1d2c67;
+  border-radius: .7rem;
+}
+
+.landing .container .card.navigation {
+  border-radius: .7rem 6rem .7rem .7rem;
+}
+
+@media (min-width: 800px) {
+  .landing .container .card.navigation {
+    -webkit-box-flex: 1;
+        -ms-flex: 1 40%;
+            flex: 1 40%;
+    margin-right: 2rem;
+  }
+}
+
+.landing .container .card.navigation .buttons {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  margin-top: 2rem;
+}
+
+.landing .container .card.navigation .buttons .button {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  background-color: #0c122c;
+  width: 45px;
+  height: 45px;
+  margin-right: 1rem;
+  border-radius: .6rem;
+  cursor: pointer;
+}
+
+.landing .container .card.details {
+  color: #dddbff;
+  text-align: center;
+  padding-bottom: 3rem;
+  position: relative;
+  font-size: .9rem;
+}
+
+@media (min-width: 800px) {
+  .landing .container .card.details {
+    -webkit-box-flex: 1;
+        -ms-flex: 1 60%;
+            flex: 1 60%;
+    text-align: left;
+    padding-bottom: 2rem;
+  }
+}
+
+.landing .container .card.details .progress-bar {
+  width: 100%;
+  height: 1.3rem;
+  background-color: #151e47;
+  margin: 1rem 0;
+  border-radius: 2rem;
+  padding: 3px;
+}
+
+.landing .container .card.details .progress-bar .progress {
+  width: 70%;
+  height: 100%;
+  background: -webkit-gradient(linear, left top, right top, from(#ffa399), to(#ff4d97));
+  background: linear-gradient(to right, #ffa399, #ff4d97);
+  border-radius: 2rem;
+  position: relative;
+  -webkit-transform: scaleX(0);
+          transform: scaleX(0);
+  -webkit-transform-origin: left;
+          transform-origin: left;
+  -webkit-transition: .8s ease;
+  transition: .8s ease;
+}
+
+.landing .container .card.details .progress-bar .progress::after {
+  content: "";
+  width: 12px;
+  height: 12px;
+  background-color: white;
+  display: inline-block;
+  position: absolute;
+  top: 50%;
+  right: 3px;
+  -webkit-transform: translateY(-50%);
+          transform: translateY(-50%);
+  border-radius: 50%;
+}
+
+.landing .container .card.details .range {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  font-weight: 700;
+  font-size: .9rem;
+}
+
+@media (min-width: 800px) {
+  .landing .container .card.details .range {
+    font-size: .8rem;
+  }
+}
+
+.landing .container .card.details .remaining-storage {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  background-color: white;
+  padding: 1rem;
+  border-radius: .7rem;
+  width: 50%;
+  position: absolute;
+  left: 50%;
+  bottom: 0;
+  -webkit-transform: translate(-50%, 50%);
+          transform: translate(-50%, 50%);
+}
+
+.landing .container .card.details .remaining-storage h1 {
+  color: #0c122c;
+  margin-right: 1rem;
+}
+
+.landing .container .card.details .remaining-storage p {
+  color: #848794;
+  font-weight: 700;
+  font-size: .8rem;
+}
+
+@media (min-width: 800px) {
+  .landing .container .card.details .remaining-storage {
+    top: 0;
+    right: 0;
+    bottom: auto;
+    left: auto;
+    -webkit-transform: translate(-20%, -60%);
+            transform: translate(-20%, -60%);
+    width: 36%;
+    border-radius: .7rem .7rem 0 .7rem;
+  }
+  .landing .container .card.details .remaining-storage h1 {
+    font-size: 2.3rem;
+  }
+  .landing .container .card.details .remaining-storage::after {
+    content: "";
+    border-top: 10px solid white;
+    border-right: 10px solid white;
+    border-bottom: 10px solid transparent;
+    border-left: 10px solid transparent;
+    position: absolute;
+    right: 0;
+    bottom: 0;
+    -webkit-transform: translateY(88%);
+            transform: translateY(88%);
+  }
+}
+/*# sourceMappingURL=style.css.map */

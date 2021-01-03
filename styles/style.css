@@ -1,4 +1,3 @@
-@import url("https://fonts.google.com/specimen/Raleway");
 * {
   -webkit-box-sizing: border-box;
           box-sizing: border-box;
@@ -155,8 +154,6 @@
           transform: scaleX(0);
   -webkit-transform-origin: left;
           transform-origin: left;
-  -webkit-transition: .8s ease;
-  transition: .8s ease;
 }
 
 .landing .container .card.details .progress-bar .progress::after {
